@@ -1,3 +1,7 @@
+### Explanation:
+In this project, CRUD operations are coded in the simplest form.
+This project is coded to set an example.
+
 # Getting Started
 
 ### Reference Documentation
