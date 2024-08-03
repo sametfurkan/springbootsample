@@ -26,7 +26,7 @@ public class CustomerService {
 
     public Customer getCustomerById(Long id) {
 
-        return customerRepository.findById(1L).orElse(null);
+        return customerRepository.findById(id).orElse(null);
     }
 
 
@@ -43,7 +43,11 @@ public class CustomerService {
 
     public Boolean deleteCustomer(Long id) {
 
-        return customerRepository.existsById(id);
+        if(customerRepository.existsById(id)) {
+            customerRepository.deleteById(id);
+            return true;
+        }
+        return false;
     }
 
 }
